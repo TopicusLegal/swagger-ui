@@ -64,6 +64,8 @@ export default class BaseLayout extends React.Component {
       return <h4>No spec provided.</h4>
     }
 
+    const isAuthorizeBtnEnabled = false
+
     return (
 
       <div className='swagger-ui'>
@@ -76,7 +78,7 @@ export default class BaseLayout extends React.Component {
                 ) : null }
               </Col>
             </Row>
-            { schemes && schemes.size || securityDefinitions ? (
+            { isAuthorizeBtnEnabled && (schemes && schemes.size || securityDefinitions) ? (
               <div className="scheme-container">
                 <Col className="schemes wrapper" mobile={12}>
                   { schemes && schemes.size ? (
