@@ -3,10 +3,6 @@ node_js:
 - '6.9'
 services:
   - docker
-branches:
-  only:
-  - master
-  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 before_deploy:
   - npm run build
 env:
