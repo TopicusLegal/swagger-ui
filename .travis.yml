@@ -3,7 +3,7 @@ node_js:
 - '6.9'
 services:
   - docker
-before_deploy:
+script:
   - npm run build
 env:
   - DOCKER_IMAGE_NAME=topicuslegal/swagger-ui
